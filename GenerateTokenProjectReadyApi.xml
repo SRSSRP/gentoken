@@ -825,7 +825,7 @@ def resholder = groovyUtils.getXmlHolder( resOperationName + "#Response" )
         <con:config>
           <script>import jxl.*
 
-//Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\ajain514\\Downloads\\Demo.xls"));
+//.Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\ajain514\\Downloads\\Demo.xls"));
 Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Project Imp\\user1.xls"));
 Sheet s=wb.getSheet (0)
 rc=s.getRows()
