@@ -721,7 +721,7 @@ TestSuiteCountloop:
      totalCount = totalCount + 1;
     } else {
      TC_status = "Fail"
-
+	status = false;
      failCount = failCount + 1;
      totalCount = totalCount + 1;
     }
