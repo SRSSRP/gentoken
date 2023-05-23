@@ -622,7 +622,7 @@ if(failTestSuite)
 }</con:tearDownScript>
     <con:reportParameters/>
   </con:testSuite>
-  <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary">
+  <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary" disabled="true">
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
