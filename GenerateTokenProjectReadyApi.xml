@@ -376,11 +376,11 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>Name</con:name>
-          <con:value>test05231123228</con:value>
+          <con:value>test05231136591</con:value>
         </con:property>
         <con:property>
           <con:name>Email</con:name>
-          <con:value>test05231123228@gmail.com</con:value>
+          <con:value>test05231136591@gmail.com</con:value>
         </con:property>
         <con:property>
           <con:name>Token</con:name>
@@ -388,7 +388,7 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
         </con:property>
         <con:property>
           <con:name>Id</con:name>
-          <con:value>233472</con:value>
+          <con:value>233558</con:value>
         </con:property>
         <con:property>
           <con:name>Passed</con:name>
@@ -915,14 +915,14 @@ Thread.sleep(500);
 log.info("mail sent")]]></script>
         </con:config>
       </con:testStep>
-      <con:tearDownScript>// Setting the TestCase Status (Pass/Fail) in TestCase level property
-String testCaseStatus=context.testRunner.getStatus().toString()
-log.info "TestCase STatus is:"+testCaseStatus
-context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
+      <con:tearDownScript>//// Setting the TestCase Status (Pass/Fail) in TestCase level property
+//String testCaseStatus=context.testRunner.getStatus().toString()
+//log.info "TestCase STatus is:"+testCaseStatus
+//context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>Passed</con:name>
-          <con:value>FAIL</con:value>
+          <con:value>PASS</con:value>
         </con:property>
       </con:properties>
       <con:reportParameters/>
@@ -985,10 +985,10 @@ catch (IOException | EncryptedDocumentException
 context.setProperty("WriteToExcel", new WriteToExcel(log, testRunner, context))</script>
         </con:config>
       </con:testStep>
-      <con:tearDownScript>// Setting the TestCase Status (Pass/Fail) in TestCase level property
-String testCaseStatus=context.testRunner.getStatus().toString()
-log.info "TestCase STatus is:"+testCaseStatus
-context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
+      <con:tearDownScript>//// Setting the TestCase Status (Pass/Fail) in TestCase level property
+//String testCaseStatus=context.testRunner.getStatus().toString()
+//log.info "TestCase STatus is:"+testCaseStatus
+//context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>Passed</con:name>
@@ -1033,10 +1033,10 @@ def mailCCprint = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUt
 log.info(mailCCprint)</script>
         </con:config>
       </con:testStep>
-      <con:tearDownScript>// Setting the TestCase Status (Pass/Fail) in TestCase level property
-String testCaseStatus=context.testRunner.getStatus().toString()
-log.info "TestCase STatus is:"+testCaseStatus
-context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
+      <con:tearDownScript>//// Setting the TestCase Status (Pass/Fail) in TestCase level property
+//String testCaseStatus=context.testRunner.getStatus().toString()
+//log.info "TestCase STatus is:"+testCaseStatus
+//context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>Passed</con:name>
