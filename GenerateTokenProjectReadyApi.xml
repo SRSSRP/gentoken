@@ -109,7 +109,7 @@
             <con:endpoint>http://restapi.adequateshop.com</con:endpoint>
             <con:request>{
 
-            "name":"${#TestCase#Name}",
+           "name":"${#TestCase#Name}",
             "email":"${#TestCase#Email}",
             "password": "${#Project#userpassword}"
 }</con:request>
@@ -376,11 +376,11 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>Name</con:name>
-          <con:value>test05230933299</con:value>
+          <con:value>test05231037953</con:value>
         </con:property>
         <con:property>
           <con:name>Email</con:name>
-          <con:value>test05230933299@gmail.com</con:value>
+          <con:value>test05231037953@gmail.com</con:value>
         </con:property>
         <con:property>
           <con:name>Token</con:name>
@@ -388,7 +388,7 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
         </con:property>
         <con:property>
           <con:name>Id</con:name>
-          <con:value>233388</con:value>
+          <con:value>233412</con:value>
         </con:property>
         <con:property>
           <con:name>Passed</con:name>
@@ -400,6 +400,35 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
     <con:testCase id="ddcd87fd-4c69-4a5a-b5e1-4f3198518ec2" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TC2- CreateUsersFromExcelData" searchProperties="true" timeout="0">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Read Data And Create User" id="68975452-04a9-47c8-8901-69a14e11847d">
+        <con:settings/>
+        <con:config service="Token Generation" resourcePath="/api/authaccount/registration" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Read Data And Create User" id="851e8c28-18eb-42c3-9693-edd4da3334a6" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://restapi.adequateshop.com</con:endpoint>
+            <con:request>{\r
+   "name" : "${#TestCase#Value [1]}",\r
+   "email" : "${#TestCase#Value [2]}",\r
+   "password" : "${#TestCase#Value [3]}"\r
+}</con:request>
+            <con:originalUri>http://restapi.adequateshop.com/api/authaccount/registration</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="06d9a328-8f4b-42c3-b263-4898655568c0" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
       <con:testStep type="groovy" name="Create Multiple Users Taking Input From Excel Data" id="c6d9a00e-1143-48a8-933f-95504f3a1dfc">
         <con:settings/>
         <con:config>
@@ -447,35 +476,6 @@ def myObj1=context.WriteToExcel
 myObj1.writeResponseToExcel(i,4,httpStatus)
      
 }</script>
-        </con:config>
-      </con:testStep>
-      <con:testStep type="restrequest" name="Read Data And Create User" id="68975452-04a9-47c8-8901-69a14e11847d">
-        <con:settings/>
-        <con:config service="Token Generation" resourcePath="/api/authaccount/registration" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="Read Data And Create User" id="851e8c28-18eb-42c3-9693-edd4da3334a6" mediaType="application/json" postQueryString="false">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>http://restapi.adequateshop.com</con:endpoint>
-            <con:request>{\r
-   "name" : "${#TestCase#Value [1]}",\r
-   "email" : "${#TestCase#Value [2]}",\r
-   "password" : "${#TestCase#Value [3]}"\r
-}</con:request>
-            <con:originalUri>http://restapi.adequateshop.com/api/authaccount/registration</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="06d9a328-8f4b-42c3-b263-4898655568c0" name="Valid HTTP Status Codes">
-              <con:settings/>
-              <con:configuration>
-                <codes>200</codes>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:parameters/>
-          </con:restRequest>
         </con:config>
       </con:testStep>
       <con:setupScript>import jxl.*
@@ -622,7 +622,7 @@ if(failTestSuite)
 }</con:tearDownScript>
     <con:reportParameters/>
   </con:testSuite>
-  <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary">
+  <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary" disabled="true">
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
@@ -713,7 +713,7 @@ TestSuiteCountloop:
     String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
      log.info("status"+status)
 
-    if (status != null && status != "") {
+    if (status.equalsIgnoreCase("Pass")) {
 //     log.info("status"+status)
      TC_status = "Pass"
 
@@ -802,15 +802,7 @@ TestSuitePrintloop:
     String testCaseName = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getLabel()
     log.info(testCaseName)
 	if (!testCaseName.contains("disabled")) {
-		String pnr = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('FlightNumber')
-
-		if (pnr != null) 
-		{
-		log.info(pnr)
-		} else 
-		{			
-			pnr = ""
-		}
+		
 
 String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('ErrorMsg')
 		if (remarks != null) 
@@ -824,7 +816,7 @@ String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTest
     String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
     log.info(status)
 
-    if (status != null && status != "") {
+    if(status.equalsIgnoreCase("Pass")){
      TC_status = "Pass"
      passCount = passCount + 1;
      totalCount = totalCount + 1;
