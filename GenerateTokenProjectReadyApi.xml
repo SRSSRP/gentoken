@@ -436,10 +436,10 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
 
 //Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\ajain514\\Downloads\\Demo.xls"));
 Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls"));
-Sheet s=wb.getSheet (0)
-rc=s.getRows()
+Sheet she=wb.getSheet (0)
+rc=she.getRows()
 log.info ("rows count: "+rc)
-cc=s.getColumns()
+cc=she.getColumns()
 log.info ("column count: "+ cc)
      String TestData=""
 def arr = new String[cc]
@@ -452,7 +452,7 @@ log.info i
        for (def j=1;j&lt;cc-1;j++)
           {
           	//log.info j
-             Cell c1 = s.getCell(j,i)
+             Cell c1 = she.getCell(j,i)
              arr [j]=c1.getContents()+"|"
              log.info ("Value in array: "+arr[j])
             TestData=TestData+arr [j]
@@ -486,8 +486,8 @@ testRunner.testCase.testSuite.project.getTestSuiteByName("ScriptLibrary").getTes
 //Reset the Response as null in the TestData Excel Sheet
 //Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\ajain514\\Downloads\\Demo.xls"));
 Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls"));
-Sheet s=wb.getSheet (0)
-rc=s.getRows()
+Sheet sh=wb.getSheet (0)
+rc=sh.getRows()
 log.info ("rows count: "+rc)
 for (def i=1;i&lt;rc;i++)
 {
