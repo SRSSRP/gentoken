@@ -622,7 +622,7 @@ if(failTestSuite)
 }</con:tearDownScript>
     <con:reportParameters/>
   </con:testSuite>
-  <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary" disabled="true">
+  <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary">
     <con:settings/>
     <con:runType>SEQUENTIAL</con:runType>
     <con:testCase id="4c51a9f2-29c6-4726-ba16-5842a61b0d50" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="EmailGenerationTC" searchProperties="true" timeout="0">
@@ -726,12 +726,12 @@ TestSuiteCountloop:
     }
    }
    else{
-//   	 log.info("******************Disabled case")
+//   	 log.info("******************Disabled case-EmailGen")
       continue TestCaseCountloop;
    }
    }
   } else {
-//   log.info("******************Disabled suite")
+//   log.info("******************Disabled suite-EmailGen")
    continue TestSuiteCountloop;
   }
  }
