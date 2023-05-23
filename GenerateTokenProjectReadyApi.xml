@@ -376,11 +376,11 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>Name</con:name>
-          <con:value>test05230509688</con:value>
+          <con:value>test05230933299</con:value>
         </con:property>
         <con:property>
           <con:name>Email</con:name>
-          <con:value>test05230509688@gmail.com</con:value>
+          <con:value>test05230933299@gmail.com</con:value>
         </con:property>
         <con:property>
           <con:name>Token</con:name>
@@ -388,7 +388,7 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
         </con:property>
         <con:property>
           <con:name>Id</con:name>
-          <con:value>233314</con:value>
+          <con:value>233388</con:value>
         </con:property>
         <con:property>
           <con:name>Passed</con:name>
@@ -624,6 +624,7 @@ if(failTestSuite)
   </con:testSuite>
   <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary">
     <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
     <con:testCase id="4c51a9f2-29c6-4726-ba16-5842a61b0d50" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="EmailGenerationTC" searchProperties="true" timeout="0">
       <con:settings/>
@@ -708,7 +709,7 @@ TestSuiteCountloop:
     log.info(testCaseName)
     log.info(j)
      if (!testCaseName.contains("disabled")) {
-     	   log.info("******************Not disabled Case")
+     	   log.info("******************Not disabled Case"+"i="+i+",j="+j)
     String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
      log.info("status"+status)
 
@@ -915,7 +916,16 @@ Thread.sleep(500);
 log.info("mail sent")]]></script>
         </con:config>
       </con:testStep>
-      <con:properties/>
+      <con:tearDownScript>// Setting the TestCase Status (Pass/Fail) in TestCase level property
+String testCaseStatus=context.testRunner.getStatus().toString()
+log.info "TestCase STatus is:"+testCaseStatus
+context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
+      <con:properties>
+        <con:property>
+          <con:name>Passed</con:name>
+          <con:value>PASS</con:value>
+        </con:property>
+      </con:properties>
       <con:reportParameters/>
     </con:testCase>
     <con:testCase id="9616151d-abb7-482c-89a2-06a96c399cac" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Reusable_TestSteps" searchProperties="true" timeout="0">
@@ -976,11 +986,16 @@ catch (IOException | EncryptedDocumentException
 context.setProperty("WriteToExcel", new WriteToExcel(log, testRunner, context))</script>
         </con:config>
       </con:testStep>
+      <con:tearDownScript>// Setting the TestCase Status (Pass/Fail) in TestCase level property
+String testCaseStatus=context.testRunner.getStatus().toString()
+log.info "TestCase STatus is:"+testCaseStatus
+context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
     <con:testCase id="6f6f05f7-5f1b-4123-bbda-86775014def7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GlobalPropertyTC" searchProperties="true" timeout="0">
       <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
       <con:testStep type="groovy" name="GlobalPropertySetup" id="48799b0f-1232-443a-ba5f-a8d8618e8009">
         <con:settings/>
         <con:config>
@@ -1014,6 +1029,10 @@ def mailCCprint = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUt
 log.info(mailCCprint)</script>
         </con:config>
       </con:testStep>
+      <con:tearDownScript>// Setting the TestCase Status (Pass/Fail) in TestCase level property
+String testCaseStatus=context.testRunner.getStatus().toString()
+log.info "TestCase STatus is:"+testCaseStatus
+context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
