@@ -109,7 +109,7 @@
             <con:endpoint>http://restapi.adequateshop.com</con:endpoint>
             <con:request>{
 
-//           "name":"${#TestCase#Name}",
+           "name":"${#TestCase#Name}",
             "email":"${#TestCase#Email}",
             "password": "${#Project#userpassword}"
 }</con:request>
@@ -622,7 +622,7 @@ if(failTestSuite)
 }</con:tearDownScript>
     <con:reportParameters/>
   </con:testSuite>
-  <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary" disabled="true">
+  <con:testSuite id="6d62ca85-2425-4c1f-8b19-f4febee2993f" name="ScriptLibrary">
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
@@ -788,7 +788,7 @@ html.append("<th width=\"8%\">Version</th>\n");
 html.append("<th width=\"25%\">TestSuiteName</th>\n");
 html.append("<th width=\"35%\">TestCaseName</th>\n");
 html.append("<th width=\"2%\">Result</th>\n");
-html.append("<th width=\"30%\">Remarks</th>");
+//html.append("<th width=\"30%\">Remarks</th>");
 
 //FileInputStream fs;
 
@@ -808,15 +808,15 @@ TestSuitePrintloop:
 	if (!testCaseName.contains("disabled")) {
 		
 
-String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('ErrorMsg')
-		if (remarks != null) 
-	{
-			log.info(remarks)
+//String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('ErrorMsg')
+//		if (remarks != null) 
+//	{
+//			log.info(remarks)
 			
-		} else 
-	{			
-			remarks = ""
-		}
+//		} else 
+//	{			
+//			remarks = ""
+//		}
 
 
     String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
