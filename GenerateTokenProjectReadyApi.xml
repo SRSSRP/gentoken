@@ -990,17 +990,17 @@ com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperti
 log.info(com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("ServiceName"))
 
 
-def mailFrom = 'smruti.patro@united.com'
+def mailFrom = "smruti.patro@united.com"
 com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.setPropertyValue('mailFrom',mailFrom);
 def mailFromprint = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailFrom")
 log.info(mailFromprint)
 
-def mailTo ='smruti.patro@united.com'
+def mailTo ="smruti.patro@united.com"
 
 com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.setPropertyValue('mailTo',mailTo);
 def mailToprint = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailTo")
 log.info(mailToprint)
-def mailCC = 'smruti.patro@united.com'
+def mailCC = "smruti.patro@united.com"
 
 
 com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.setPropertyValue('mailCC',mailCC);
