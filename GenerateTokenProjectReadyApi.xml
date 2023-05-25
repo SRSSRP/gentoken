@@ -876,13 +876,13 @@ message.setContent(multipart);
 def mailFrom_var = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailFrom")
 def mailTo_var = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailTo")
 //def mailCC = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailCC")
-//mailFrom = "smruti.patro@united.com";
-//mailTo = "smruti.patro@united.com";
-//log.info("mailTo:"+mailTo)
-//log.info("mailFrom:"+mailFrom)
+mailFrom = "smruti.patro@united.com";
+mailTo = "smruti.patro@united.com";
+log.info("mailTo:"+mailTo)
+log.info("mailFrom:"+mailFrom)
 
-message.setFrom(new InternetAddress(mailFrom_var));
-message.setRecipients(Message.RecipientType.TO, mailTo_var);
+message.setFrom(new InternetAddress(mailFrom));
+message.setRecipients(Message.RecipientType.TO, mailTo);
 //message.setRecipients(Message.RecipientType.CC, mailCC);
 
 message.setSubject("Generate_Token Project "+endTime);
