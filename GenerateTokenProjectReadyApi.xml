@@ -873,9 +873,10 @@ multipart.addBodyPart(htmlBodyPart);
 
 message.setContent(multipart);
 
-def mailFrom = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailFrom")
-def mailTo = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailTo")
+def mailFrom_var = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailFrom")
+def mailTo_var = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailTo")
 //def mailCC = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailCC")
+mailFrom = "smruti.patro@united.com";
 mailTo = "smruti.patro@united.com";
 log.info("mailTo:"+mailTo)
 log.info("mailFrom:"+mailFrom)
