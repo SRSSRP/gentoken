@@ -109,7 +109,7 @@
             <con:endpoint>http://restapi.adequateshop.com</con:endpoint>
             <con:request>{
 
-           "name":"${#TestCase#Name}",
+//           "name":"${#TestCase#Name}",
             "email":"${#TestCase#Email}",
             "password": "${#Project#userpassword}"
 }</con:request>
@@ -376,11 +376,11 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>Name</con:name>
-          <con:value>test05250948890</con:value>
+          <con:value>test05250110815</con:value>
         </con:property>
         <con:property>
           <con:name>Email</con:name>
-          <con:value>test05250948890@gmail.com</con:value>
+          <con:value>test05250110815@gmail.com</con:value>
         </con:property>
         <con:property>
           <con:name>Token</con:name>
@@ -392,7 +392,7 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
         </con:property>
         <con:property>
           <con:name>Passed</con:name>
-          <con:value>PASS</con:value>
+          <con:value>FAIL</con:value>
         </con:property>
       </con:properties>
       <con:reportParameters/>
@@ -816,8 +816,8 @@ String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTest
 		} else 
 	{			
 			remarks = ""
-//.			remarks="Pass"
 		}
+
 
     String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
     log.info(status)
@@ -850,7 +850,7 @@ String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTest
 
 
 //    html.append("<td style=text-align:center>" + remarks + "</td>\n");
-    html.append("<td style=text-align:center>" + remarks + "</td>\n");
+//    html.append("<td style=text-align:center>" + remarks + "</td>\n");
     html.append("</tr>\n");
 	}
 	else{
