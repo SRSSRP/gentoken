@@ -875,12 +875,12 @@ message.setContent(multipart);
 
 def mailFrom = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailFrom")
 def mailTo = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailTo")
-def mailCC = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailCC")
-log.info mailTo
+//def mailCC = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailCC")
+log.info("mailTo"+mailTo)
 
 message.setFrom(new InternetAddress(mailFrom));
 message.setRecipients(Message.RecipientType.TO, mailTo);
-message.setRecipients(Message.RecipientType.CC, mailCC);
+//message.setRecipients(Message.RecipientType.CC, mailCC);
 
 message.setSubject("Generate_Token Project "+endTime);
 Transport.send(message);
@@ -993,19 +993,18 @@ log.info(com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globa
 def mailFrom = "smruti.patro@united.com"
 com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.setPropertyValue('mailFrom',mailFrom);
 def mailFromprint = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailFrom")
-log.info(mailFromprint)
+log.info("mailFromPrint"+mailFromprint)
 
 def mailTo ="smruti.patro@united.com"
-
 com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.setPropertyValue('mailTo',mailTo);
 def mailToprint = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailTo")
-log.info(mailToprint)
-def mailCC = "smruti.patro@united.com"
+log.info("mailToprint"+mailToprint)
 
 
-com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.setPropertyValue('mailCC',mailCC);
-def mailCCprint = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailCC")
-log.info(mailCCprint)</script>
+//def mailCC = "smruti.patro@united.com"
+//com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.setPropertyValue('mailCC',mailCC);
+//def mailCCprint = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailCC")
+//log.info(mailCCprint)</script>
         </con:config>
       </con:testStep>
       <con:tearDownScript>//// Setting the TestCase Status (Pass/Fail) in TestCase level property
