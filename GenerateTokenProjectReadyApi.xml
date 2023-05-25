@@ -816,7 +816,7 @@ String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTest
 		} else 
 	{			
 			remarks = ""
-//			remarks="Pass"
+//.			remarks="Pass"
 		}
 
     String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
