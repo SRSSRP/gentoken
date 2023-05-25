@@ -876,7 +876,7 @@ message.setContent(multipart);
 def mailFrom = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailFrom")
 def mailTo = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailTo")
 //def mailCC = com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties.getPropertyValue("mailCC")
-log.info("mailTo"+mailTo)
+//log.info("mailTo"+mailTo)
 
 message.setFrom(new InternetAddress(mailFrom));
 message.setRecipients(Message.RecipientType.TO, mailTo);
