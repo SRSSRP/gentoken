@@ -109,7 +109,7 @@
             <con:endpoint>http://restapi.adequateshop.com</con:endpoint>
             <con:request>{
 
-//           "name":"${#TestCase#Name}",
+           "name":"${#TestCase#Name}",
             "email":"${#TestCase#Email}",
             "password": "${#Project#userpassword}"
 }</con:request>
@@ -376,11 +376,11 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>Name</con:name>
-          <con:value>test05241206810</con:value>
+          <con:value>test05250940965</con:value>
         </con:property>
         <con:property>
           <con:name>Email</con:name>
-          <con:value>test05241206810@gmail.com</con:value>
+          <con:value>test05250940965@gmail.com</con:value>
         </con:property>
         <con:property>
           <con:name>Token</con:name>
@@ -388,7 +388,7 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
         </con:property>
         <con:property>
           <con:name>Id</con:name>
-          <con:value>233606</con:value>
+          <con:value>233758</con:value>
         </con:property>
         <con:property>
           <con:name>Passed</con:name>
@@ -809,12 +809,28 @@ TestSuitePrintloop:
 		
 
 String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('ErrorMsg')
+//String remarks1 = "Error"
+//String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
+//     log.info("status"+status)
+//if (status.equalsIgnoreCase("Pass") && remarks != null )
+//{
+//	log.info(remarks)
+//}
+//else if(status.equalsIgnoreCase("Fail") && remarks != null )	
+//{
+//	log.info(remarks1)
+//}else 
+//	{			
+//			remarks = ""
+//		}
 		if (remarks != null) 
 	{
 			log.info(remarks)
+			
 		} else 
 	{			
 			remarks = ""
+//			remarks="Pass"
 		}
 
     String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
@@ -847,6 +863,7 @@ String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTest
     }
 
 
+//    html.append("<td style=text-align:center>" + remarks + "</td>\n");
     html.append("<td style=text-align:center>" + remarks + "</td>\n");
     html.append("</tr>\n");
 	}
