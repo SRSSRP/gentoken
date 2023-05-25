@@ -720,12 +720,12 @@ TestSuiteCountloop:
     if (status.equalsIgnoreCase("Pass")) {
 //     log.info("status"+status)
      TC_status = "Pass"
-
+	
      passCount = passCount + 1;
      totalCount = totalCount + 1;
     } else {
      TC_status = "Fail"
-	
+		
      failCount = failCount + 1;
      totalCount = totalCount + 1;
     }
@@ -809,20 +809,6 @@ TestSuitePrintloop:
 		
 
 String remarks = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('ErrorMsg')
-//String remarks1 = "Error"
-//String status = testRunner.testCase.testSuite.project.getTestSuiteAt(i).getTestCaseAt(j).getPropertyValue('Passed')
-//     log.info("status"+status)
-//if (status.equalsIgnoreCase("Pass") && remarks != null )
-//{
-//	log.info(remarks)
-//}
-//else if(status.equalsIgnoreCase("Fail") && remarks != null )	
-//{
-//	log.info(remarks1)
-//}else 
-//	{			
-//			remarks = ""
-//		}
 		if (remarks != null) 
 	{
 			log.info(remarks)
