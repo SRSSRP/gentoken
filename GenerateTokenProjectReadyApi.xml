@@ -374,7 +374,8 @@ context.testCase.setPropertyValue("Passed",testCaseStatus)</con:tearDownScript>
           <script>import jxl.*
 
 
-Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls"));
+//Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls"));
+Workbook wb=Workbook.getWorkbook (new File("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\test_job\\user.xls"));
 Sheet s=wb.getSheet (0)
 rc=s.getRows()
 log.info ("rows count: "+rc)
@@ -453,7 +454,8 @@ testRunner.testCase.testSuite.project.getTestSuiteByName("ScriptLibrary").getTes
 
 //Reset the Response as null in the TestData Excel Sheet
 
-Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls"));
+//Workbook wb=Workbook.getWorkbook (new File("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls"));
+Workbook wb=Workbook.getWorkbook (new File("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\test_job\\user.xls"));
 Sheet s=wb.getSheet (0)
 rc=s.getRows()
 log.info ("rows count: "+rc)
@@ -930,7 +932,8 @@ class WriteToExcel {
   }
  def writeResponseToExcel(int rowNumber,int cellNumber,String valueToBeUpdated) {
  	
-String excelFilePath = "C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls";
+//String excelFilePath = "C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls";
+String excelFilePath = "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\test_job\\user.xls";
 try
 {
 FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
@@ -939,7 +942,8 @@ FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
 Cell cell2Update = sheet.getRow(rowNumber).getCell(cellNumber);
 cell2Update.setCellValue((String)valueToBeUpdated);
 inputStream.close();
-            FileOutputStream outputStream = new FileOutputStream("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls");
+//            FileOutputStream outputStream = new FileOutputStream("C:\\Users\\spatro24\\OneDrive - DXC Production\\Desktop\\Token Project Final\\user.xls");
+            FileOutputStream outputStream = new FileOutputStream("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\test_job\\user.xls");
             workbook.write(outputStream);
             workbook.close();
             outputStream.close();
